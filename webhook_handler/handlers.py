@@ -29,4 +29,8 @@ def handle_model_update(sender, created, instance, **kwargs):
             ]
         }
         # send the request
-        requests.post(url, data=json.dumps(data), headers={"Content-Type": "application/json"})
+        try:
+            temp = requests.post(url, data=json.dumps(data), headers={"Content-Type": "application/json"})
+            print(temp.text)
+        except Exception as e:
+            print("Error in sending request to discord: ", e)
