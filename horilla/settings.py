@@ -195,8 +195,6 @@ MESSAGE_TAGS = {
     messages.WARNING: "oh-alert--warning",
     messages.ERROR: "oh-alert--danger",
 }
-
-
 CSRF_TRUSTED_ORIGINS = ["https://employee.oxlac.com",
                  "http://employee.oxlac.com",
                  'http://localhost:8000',
