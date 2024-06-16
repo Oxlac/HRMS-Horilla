@@ -39,7 +39,7 @@ env.read_env(os.path.join(BASE_DIR, ".env"), overwrite=True)
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
