@@ -8,10 +8,11 @@ WORKDIR /app/
 
 COPY . .
 
-RUN chmod +x /app/entrypoint.sh
-
 RUN pip install -r requirements.txt
 
-EXPOSE 8000
+COPY media/ /media
+RUN rm -rf ./media
 
-CMD ["python3", "manage.py", "runserver"]
+EXPOSE 8000
+RUN chmod +x /app/entrypoint.sh
+CMD ["/app/entrypoint.sh"]
