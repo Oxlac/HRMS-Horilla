@@ -41,7 +41,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS")
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -197,7 +197,11 @@ MESSAGE_TAGS = {
 }
 
 
-CSRF_TRUSTED_ORIGINS = env("CSRF_TRUSTED_ORIGINS")
+CSRF_TRUSTED_ORIGINS = ["https://employee.oxlac.com",
+                 "http://employee.oxlac.com",
+                 'http://localhost:8000',
+                 "http://13.235.248.150:8000/",
+                 "https://13.235.248.150:8000/"]
 
 LOGIN_URL = "/login"
 

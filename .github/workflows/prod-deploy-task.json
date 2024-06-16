@@ -24,7 +24,7 @@
             ],
             "mountPoints": [
                 {
-                    "sourceVolume": "ems-media",
+                    "sourceVolume": "ems-media2",
                     "containerPath": "/ems/media",
                     "readOnly": false
                 }
@@ -45,10 +45,10 @@
     "family": "EMS-Prod",
     "executionRoleArn": "arn:aws:iam::732163342771:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
-    "revision": 47,
+    "revision": 80,
     "volumes": [
         {
-            "name": "ems-media",
+            "name": "ems-media2",
             "dockerVolumeConfiguration": {
                 "scope": "shared",
                 "autoprovision": false,
