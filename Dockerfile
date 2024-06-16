@@ -9,5 +9,5 @@ COPY media/ /media
 RUN rm -rf ./media
 
 EXPOSE 8000
-RUN chmod +x /app/entrypoint.sh
-CMD ["/app/entrypoint.sh"]
+RUN chmod +x /ems/entrypoint.sh
+CMD ["/ems/entrypoint.sh"]
