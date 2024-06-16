@@ -8,8 +8,8 @@ import os
 @receiver(post_save)
 # Webhook triggered when a new candidate is created
 def handle_model_update(sender, created, instance, **kwargs):
-    print("hello"*100)
     if sender.__name__ == 'Candidate' and created: 
+        print("hello"*100)
         # send a request to the webhook
         url = "https://discord.com/api/webhooks/1214916560590741564/lWDmGMRLd7cZ8Aa7-819ewdAPqUPgse6mRPGRDbtJmNom3EgSeXrKX13TODMasqYZ1fs"
         data = {
